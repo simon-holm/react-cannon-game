@@ -15,7 +15,6 @@ const Canvas = ({ children }) => {
       viewBox={viewBox}
     >
       {children}
-      <circle cx={0} cy={0} r={50} />
     </svg>
   )
 }
