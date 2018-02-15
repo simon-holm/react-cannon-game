@@ -2,11 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const Canvas = ({ children, trackMouse }) => {
+  const gameHeight = 1200
   const viewBox = [
     window.innerWidth / -2,
-    100 - window.innerHeight,
+    100 - gameHeight,
     window.innerWidth,
-    window.innerHeight
+    gameHeight
   ]
 
   return (
