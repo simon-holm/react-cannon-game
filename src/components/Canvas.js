@@ -1,6 +1,7 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-const Canvas = ({ children }) => {
+const Canvas = ({ children, trackMouse }) => {
   const viewBox = [
     window.innerWidth / -2,
     100 - window.innerHeight,
@@ -13,10 +14,15 @@ const Canvas = ({ children }) => {
       id="cannon-game-canvas"
       preserveAspectRatio="xMaxYMax none"
       viewBox={viewBox}
+      onMouseMove={trackMouse}
     >
       {children}
     </svg>
   )
+}
+
+Canvas.propTypes = {
+  trackMouse: PropTypes.func.isRequired
 }
 
 export default Canvas
