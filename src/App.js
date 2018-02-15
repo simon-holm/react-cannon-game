@@ -7,6 +7,8 @@ import Sky from './components/Sky'
 import Ground from './components/Ground'
 import CannonPipe from './components/CannonPipe'
 import CannonBase from './components/CannonBase'
+import CannonBall from './components/CannonBall'
+import CurrentScore from './components/CurrentScore'
 
 class App extends Component {
   componentDidMount() {
@@ -26,6 +28,8 @@ class App extends Component {
         <Ground />
         <CannonPipe rotation={this.props.angle} />
         <CannonBase />
+        <CannonBall position={{ x: 0, y: -100 }} />
+        <CurrentScore score={10} />
       </Canvas>
     )
   }

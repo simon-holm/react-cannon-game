@@ -16,6 +16,11 @@ const Canvas = ({ children, trackMouse }) => {
       viewBox={viewBox}
       onMouseMove={trackMouse}
     >
+      <defs>
+        <filter id="shadow">
+          <feDropShadow dx="1" dy="1" stdDeviation="2" />
+        </filter>
+      </defs>
       {children}
     </svg>
   )
